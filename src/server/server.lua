@@ -16,6 +16,16 @@ lib.callback.register('justgroot:get:starter:item', function(source)
 	for _, item in ipairs(Config.items) do
 		AddItem(source, item.item, item.count)
 	end
+
+	local identifier = GetPlayerIdentifier(source)
+	local name = GetPlayerName(source)
+
+
+
 	RemoveItem(source, Config.starteritem, 1)
 	ShowNotification(source, LAN('itemadded'))
+
+	if Config.settings.DiscordLog then
+		DiscordLog(identifier, name)
+	end
 end)
