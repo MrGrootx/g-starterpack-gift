@@ -5,7 +5,6 @@ Config.settings = {
 	Debug = true,     -- true | false
 	Notify = "qb-core", -- "esx_core" | "ox_lib" | "qb-core",
 	DiscordLog = true, -- true | false
-	ProgressBar = 'qb', -- 'ox' | 'qb'
 }
 
 -- Item used to open starter pack
