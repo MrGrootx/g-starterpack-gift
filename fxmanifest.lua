@@ -4,7 +4,7 @@ game "gta5"
 
 name "A script"
 version "1.0.0"
-description "desc"
+description "starter pack"
 author "Groot Development"
 
 shared_scripts{
