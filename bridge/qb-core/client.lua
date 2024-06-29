@@ -24,6 +24,6 @@ function ShowNotification(text)
          type = 'inform'
       })
    else
-      DebugLog("Unknown notification type: " .. Config.settings.Notify)
+      print("Unknown notification type: " .. Config.settings.Notify)
    end
 end

@@ -3,7 +3,7 @@ Config = {}
 Config.settings = {
 	Language = "en",  -- en - english | ta - tamil | malu - malayalam | fr - french | ko - korean | hi - hindi | nl - dutch
 	Debug = true,     -- true | false
-	Notify = "qb-core", -- "esx_core" | "ox_lib" | "qb-core",
+	Notify = "ox_lib", -- "esx_core" | "ox_lib" | "qb-core",
 	DiscordLog = true, -- true | false
 }
 

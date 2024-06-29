@@ -12,7 +12,7 @@ end
 
 RegisterNetEvent('justgroot:get:starter:progress', function()
 	local progress = ProgressBar(Config.ProgressbarTime, Config.ProgressbarLabel)
-	if progress == true then
+	if progress ~= false then
 		lib.callback.await('justgroot:get:starter:item:new', GetPlayerServerId(PlayerId()))
 	else
 		ShowNotification(LAN('progcanceled'))
