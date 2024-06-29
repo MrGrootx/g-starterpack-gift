@@ -3,7 +3,7 @@ lua54 "yes"
 game "gta5"
 
 name "A script"
-version "0.0.1"
+version "1.0.0"
 description "desc"
 author "Groot Development"
 
