@@ -7,20 +7,20 @@ if Config.settings.Debug then
 end
 
 
+
+
 RegisterUsableItem(Config.starteritem, function(source)
-	lib.callback.await('justgroot:get:starter:item', source)
+	TriggerClientEvent('justgroot:get:starter:progress', source)
 end)
 
 
-lib.callback.register('justgroot:get:starter:item', function(source)
+lib.callback.register('justgroot:get:starter:item:new', function(source)
 	for _, item in ipairs(Config.items) do
 		AddItem(source, item.item, item.count)
 	end
 
-	local identifier = GetPlayerIdentifier(source)
+	local identifier = GetIdentifier(source)
 	local name = GetPlayerName(source)
-
-
 
 	RemoveItem(source, Config.starteritem, 1)
 	ShowNotification(source, LAN('itemadded'))

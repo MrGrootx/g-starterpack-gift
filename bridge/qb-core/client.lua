@@ -13,7 +13,17 @@ end
 
 QBCore = exports["qb-core"]:GetCoreObject()
 
-function ShowNotification(text)
-	QBCore.Functions.Notify(text)
-end
 
+
+function ShowNotification(text)
+   if Config.settings.Notify == 'qb-core' then
+      QBCore.Functions.Notify(text)
+   elseif Config.settings.Notify == 'ox_lib' then
+      lib.notify({
+         description = text,
+         type = 'inform'
+      })
+   else
+      DebugLog("Unknown notification type: " .. Config.settings.Notify)
+   end
+end

@@ -32,13 +32,7 @@ function GetIdentifier(src)
 	return nil
 end
 
-function GetPlayerIdentifier(source)
-	local xPlayer = ESX.GetPlayerFromId(source)
-	if xPlayer then
-		return xPlayer.identifier
-	end
-	return nil
-end
+
 
 function GetPlayerName(source)
 	local xPlayer = ESX.GetPlayerFromId(source)

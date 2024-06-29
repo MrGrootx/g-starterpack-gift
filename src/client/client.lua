@@ -7,15 +7,14 @@ if Config.settings.Debug then
 end
 
 
-lib.callback.register('justgroot:get:starter:item', function()
-	local progress = ProgressBar(Config.ProgressbarTime, Config.ProgressbarLabel)
 
+
+
+RegisterNetEvent('justgroot:get:starter:progress', function()
+	local progress = ProgressBar(Config.ProgressbarTime, Config.ProgressbarLabel)
 	if progress ~= false then
-		lib.callback.await('justgroot:get:starter:item', GetPlayerServerId(PlayerId()))
+		lib.callback.await('justgroot:get:starter:item:new', GetPlayerServerId(PlayerId()))
 	else
 		ShowNotification(LAN('progcanceled'))
 	end
 end)
-
-
-
